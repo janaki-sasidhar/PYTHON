@@ -1,0 +1,16 @@
+def fuck(lyricss):
+    mydict={}
+    for word in lyricss:
+        if word in mydict:
+            mydict[word]+=1
+        else:
+            mydict[word]=1
+    return mydict
+lyrics = input("Enter the song lyrics\n")
+b=lyrics.split()
+c=b.count(',')
+for number in range(c):
+    b.remove(',')
+result=fuck(b)
+for key , value in result.items():
+        print(f"The word {key} is repeated {value} times")
