@@ -11,6 +11,7 @@ b=lyrics.split()
 c=b.count(',')
 for number in range(c):
     b.remove(',')
-result=fuck(b)
+newlist=[element.upper() for element in b]
+result=fuck(newlist)
 for key , value in result.items():
-        print(f"The word {key} is repeated {value} times")
+	print(f"The word {key} is repeated {value} times")
